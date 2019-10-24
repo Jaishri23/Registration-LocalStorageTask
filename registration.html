@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title> SignUp</title>
+        
+        <style>
+           
+        
+        </style>
+    </head>
+    <body>
+            <form>
+                        <fieldset>
+                            <legend>
+                                Registration Form
+                            </legend>
+                            <form id="register-form"> 
+                                  User Name:  <input id="name1" type="text" placeholder="Name" value=""/><br><br>
+                                   Password: <input id="pw" type="password" placeholder="Password" value=""/><br><br>
+                                   E-mail:<input id="email1" type="email" value=""><br><br>
+                                   Phone Number:<input id="ph" type="text" value=""><br><br>
+                                   Date of Birth:<input id="bday" type="date" name="bday"><br><br>
+                                   City:<select id="city" name="city" value="">
+                                       <option>Delhi</option>
+                                       <option>Mumbai</option>
+                                       <option>Chennai</option>
+                                       <option>Hyderabad</option>
+                                       <option>Kolkata</option>
+                                   </select><br><br>
+                                  Highest Education: <input name="edu" type="radio" value="">BE
+                                  <input name="edu" type="radio" value="">MTech
+                                  <input name="edu" type="radio" value="">PhD
+                                  <br><br>
+                                  Salary in Figures:
+                                  <input id="salary" type="number" min=1 max=6></input><br><br>
+                                  Explain how your experience and qualification matches the criteria for current position.<br>
+                                  <br>
+                                      <textarea id="why" name="Decriptiopn" rows="20" cols="100">
+                                          
+                                         Write Here.. 
+                                      </textarea><br><br>
+                                      Upload Resume: <input id="resume" type="file" name="Resume"> <br><br>
+                                      <input id="conditions" type="checkbox" name="terms and Condition"> I Agree terms and condition <br><br>
+                                    <input id="rgstr_btn" type="submit" value="SignUp" onClick="store()"/> 
+                                    </form>
+                        </fieldset>
+                    </form>
+        
+
+        <script>
+    var userName=document.getElementById('name1');
+    var userPw = document.getElementById('pw');
+    var userEmail=document.getElementById('email1');
+    var userPhone=document.getElementById('ph');
+    var userBday=document.getElementById('bday');
+    var userCity=document.getElementById('city');
+    var userSal=document.getElementById('salary');
+    var userWhy=document.getElementById('why');
+    var userResume=document.getElementById('resume');
+    var userConditions=document.getElementById('conditions');
+    var userEdu=document.getElementsByName('edu');
+    //var val=localStorage.getItem('edu');
+    /*var userBE=document.getElementById('radio1');
+    var userMtech=document.getElementById('radio2');
+    var userPhD=document.getElementById('radio3');*/
+    console.log(userEmail);
+    function store() {
+    localStorage.setItem('userName', userName.value);
+    localStorage.setItem('userPw', userPw.value);
+    localStorage.setItem('userEmail',userEmail.value);
+    localStorage.setItem('userPhone', userPhone.value);
+    localStorage.setItem('userBday',userBday.value);
+    localStorage.setItem('userCity', userCity.value);
+    localStorage.setItem('userSal',userSal.value);
+    localStorage.setItem('userWhy', userWhy.value);
+    localStorage.setItem('userResume', userResume.value);
+    localStorage.setItem('userConditions', userConditions.value);
+    localStorage.setItem('userEdu',userEdu.value);
+    
+   /* localStorage.setItem('userBE', userBE);
+    localStorage.setItem('userMtech', userMtech.value);
+    localStorage.setItem('userPhD', userPhD.value);*/
+}
+        </script>       
+    
+
+
+ 
+
+      
+        
+    </body>
+</html>
